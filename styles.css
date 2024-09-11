@@ -1,6 +1,9 @@
 :root{
-    --mainBgColor: #f4f4f4;
-    --navColor: #333;
+    --mainBgColor: #eee2e2;
+    --navColor: #685959;
+    --contentEvenColor: #bfa9a9;
+    --contentOddColor: #a28f8f;
+    --textColor: #aa9e9e;
 }
 body{
     background-color: var(--mainBgColor);
@@ -15,9 +18,9 @@ nav{
     display: flex;
     justify-content: space-between;
     padding: 0 50px;
-    color: white;
     background-color: var(--navColor);
     position: sticky;
+    top: 0;
 }
 nav ul{
     display: flex;
@@ -30,25 +33,92 @@ nav a{
     text-decoration: none;
     color: white;
 }
-nav a:hover{
-    color: gray;
+header{
+    text-align: center;
 }
-
 .content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     flex: 1;
-}
+    margin-inline: 200px;
+    padding: 50px;
 
+}
+.content section:nth-child(even){
+    background-color: var(--contentEvenColor);
+}
+.content section:nth-child(odd){
+    background-color: var(--contentOddColor);
+}
+section{
+    display: flex;
+    gap: 50px;
+    padding: 50px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+}
+section div{
+    width: 50%;
+    text-align: center;
+}
+section img{
+    height: 20vw;
+}
+section h1{
+    font-size: 2em;
+}
+section p{
+    font-size: 1.5em;
+}
 footer{
     background-color: var(--navColor);
     color: white;
     text-align: center;
     padding: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
     position: relative;
     bottom: 0;
 }
 .contacts{
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
     align-items: center;
-    
+}
+.contacts div{
+    display: flex;
+    gap: 20px;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+a:hover{
+    color: gray;
+}
+
+@media (max-width: 1100px){
+    .content{
+        margin-inline: 12vw;
+    }
+    section{
+        flex-direction: column;
+    }
+    section div{
+        width: 100%;
+    }
+    body {
+        font-size: 1.5vw; /* 2% of the viewport width */
+    }
+    a{
+        font-size: 2.5vw;
+    }
+    nav, footer{
+        font-size: 2.5vw;
+    }
 }
