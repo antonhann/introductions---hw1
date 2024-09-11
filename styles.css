@@ -101,6 +101,9 @@ a{
 a:hover{
     color: gray;
 }
+.active{
+    text-decoration: underline;
+}
 
 @media (max-width: 1100px){
     .content{
