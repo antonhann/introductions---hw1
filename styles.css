@@ -122,6 +122,16 @@ a:hover{
         font-size: 2.5vw;
     }
     nav, footer{
-        font-size: 2.5vw;
+        font-size: 2vw;
+    }
+    nav a{
+        font-size: 3vw;
+    }
+    section{
+        gap: 0;
+        padding: 40px;
+    }
+    .content section:nth-child(even){
+        flex-direction: column-reverse;
     }
 }
